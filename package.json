@@ -6,7 +6,8 @@
     "gulp-util": "^3.0.1",
     "karma": "^0.12.24",
     "karma-chrome-launcher": "^0.1.5",
-    "karma-jasmine": "^0.2.2"
+    "karma-jasmine": "^0.2.2",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "connect": "^2.14.4",
