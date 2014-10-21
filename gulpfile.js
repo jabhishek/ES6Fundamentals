@@ -72,6 +72,21 @@ gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
 
+gulp.task('karma', function () {
+// Be sure to return the stream
+    return gulp.src([
+        'app/**/*.js',
+        'tests/**/*.js'
+    ])
+        .pipe(gulp.karma({
+            configFile: 'karma.conf.js',
+            action: 'watch'
+        }))
+        .on('error', function (err) {
+            throw err;
+        });
+});
+
 gulp.task('connect', function () {
     var connect = require('connect');
     var app = connect()

@@ -2,7 +2,11 @@
   "name": "es6",
   "version": "0.0.0",
   "dependencies": {
-    "gulp-util": "^3.0.1"
+    "gulp-karma": "0.0.4",
+    "gulp-util": "^3.0.1",
+    "karma": "^0.12.24",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-jasmine": "^0.2.2"
   },
   "devDependencies": {
     "connect": "^2.14.4",
