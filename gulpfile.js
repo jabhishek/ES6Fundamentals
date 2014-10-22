@@ -2,6 +2,7 @@
 // generated on 2014-10-21 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
+var gulpKarma = require('gulp-karma');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -75,10 +76,10 @@ gulp.task('default', ['clean'], function () {
 gulp.task('karma', function () {
 // Be sure to return the stream
     return gulp.src([
-        'app/**/*.js',
+        'app/scripts/**/*.js',
         'tests/**/*.js'
     ])
-        .pipe(gulp.karma({
+        .pipe(gulpKarma({
             configFile: 'karma.conf.js',
             action: 'watch'
         }))
