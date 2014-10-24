@@ -11,3 +11,4 @@ class Greeter {
 
 var greeter = new Greeter('Hello world!');
 greeter.greet();
+

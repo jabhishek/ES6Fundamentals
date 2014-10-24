@@ -15,3 +15,5 @@ Using Traceur in Production:-
     b. traceur --block-binding true --dir ./app/scripts ./app/scripts/out - to compile all files in app/scripts into app/scripts/out  
        traceur --out app/scripts/build.js app/scripts/main.js app/scripts/main2.js app/scripts/main3.js - compile main, main1, main2 into build.js
     
+2. gulp
+    a. gulp-traceur task to transpile ES6

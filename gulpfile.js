@@ -3,6 +3,7 @@
 
 var gulp = require('gulp');
 var gulpKarma = require('gulp-karma');
+var traceur = require('gulp-traceur');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -12,6 +13,16 @@ gulp.task('scripts', function () {
         .pipe($.jshint())
         .pipe($.jshint.reporter(require('jshint-stylish')))
         .pipe($.size());
+});
+
+gulp.task('clean', function () {
+    return gulp.src('app/build', { read: false }).pipe($.clean());
+});
+
+gulp.task('traceur', ['clean'], function () {
+    return gulp.src('app/scripts/**/*.js')
+        .pipe(traceur({experimental: true, blockBinding: true }))
+        .pipe(gulp.dest('app/build'));
 });
 
 gulp.task('karma', function () {
@@ -63,4 +74,5 @@ gulp.task('watch', ['connect', 'serve'], function () {
     });
 
     gulp.watch('app/scripts/**/*.js', ['scripts']);
+    gulp.watch('app/scripts/**/*.js', ['traceur']);
 });
