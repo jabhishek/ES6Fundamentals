@@ -8,3 +8,10 @@
 
 
 Chrome - Enable Experimental features at chrome://flags/
+
+Using Traceur in Production:-
+1. Commandline
+    a. npm install traceur -g
+    b. traceur --block-binding true --dir ./app/scripts ./app/scripts/out - to compile all files in app/scripts into app/scripts/out  
+       traceur --out app/scripts/build.js app/scripts/main.js app/scripts/main2.js app/scripts/main3.js - compile main, main1, main2 into build.js
+    
